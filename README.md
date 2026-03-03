@@ -77,3 +77,26 @@ This design can help social welfare organizations:
 - Improve compliance posture
 - Increase trust with stakeholders
 - Prevent costly security incidents
+## Sample IAM Policy (Least Privilege)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowSpecificBucketAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::fukushi-backup-test-ino-2026/*"
+    },
+    {
+      "Sid": "DenyBucketDeletion",
+      "Effect": "Deny",
+      "Action": "s3:DeleteBucket",
+      "Resource": "arn:aws:s3:::fukushi-backup-test-ino-2026"
+    }
+  ]
+}
