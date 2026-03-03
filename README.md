@@ -55,3 +55,23 @@ This design reduces:
 Kenta Ino  
 AWS Certified  
 Focus: Cloud Security for Social Welfare Organizations
+---
+
+## Improvement Plan
+
+Future enhancements:
+- Implement CloudTrail for audit logging
+- Add AWS Config rules for compliance monitoring
+- Introduce S3 Object Lock for stronger deletion protection
+- Automate setup using Infrastructure as Code (Terraform / CloudFormation)
+
+---
+
+## Business Impact
+
+This design can help social welfare organizations:
+
+- Reduce operational risk
+- Improve compliance posture
+- Increase trust with stakeholders
+- Prevent costly security incidents
