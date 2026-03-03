@@ -15,6 +15,7 @@ The goal is to:
 ## Architecture Diagram
 
 ![Architecture Diagram](architecture-diagram.png)
+This diagram illustrates the least privilege access flow and bucket-level security controls.
 - Amazon S3 bucket
 - Default encryption: SSE-S3
 - Block Public Access: Enabled (All ON)
