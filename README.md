@@ -13,7 +13,21 @@ The goal is to:
 ---
 
 ## Architecture
+flowchart LR
+  U[IAM User<br/>s3-operator-test] -->|Least privilege| P[(IAM Policies)]
+  P -->|Allow| S3[(S3 Bucket<br/>fukushi-backup-test-ino-2026)]
 
+  subgraph S3_Security[Bucket Security]
+    E[Default Encryption<br/>SSE-S3]
+    B[Block Public Access<br/>All ON]
+    V[Versioning<br/>Enabled]
+  end
+
+  S3 --- E
+  S3 --- B
+  S3 --- V
+
+  U -. Deny .-> IAM[IAM Console<br/>Not allowed]
 - Amazon S3 bucket
 - Default encryption: SSE-S3
 - Block Public Access: Enabled (All ON)
