@@ -13,6 +13,8 @@ The goal is to:
 ---
 
 ## Architecture
+```mermaid
+```mermaid
 flowchart LR
   U[IAM User<br/>s3-operator-test] -->|Least privilege| P[(IAM Policies)]
   P -->|Allow| S3[(S3 Bucket<br/>fukushi-backup-test-ino-2026)]
